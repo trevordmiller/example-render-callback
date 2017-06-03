@@ -15,16 +15,19 @@ The app can be viewed at [https://example-render-callback.now.sh](https://exampl
 The syntax for a Render Callback looks like this:
 
 ```javascript
-import React, {Component} from 'react'
+import {Component} from 'react'
 
 class SomeComponent extends Component {
 
-  state = {
-    someState: someValue,
+  constructor(props) {
+    super(props)
+    this.state = {
+      someState: someValue,
+    }
   }
 
   render() {
-    return children(this.state.someState)
+    return this.props.children(this.state.someState)
   }
 }
 
