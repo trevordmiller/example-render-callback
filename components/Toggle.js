@@ -2,15 +2,11 @@ import {Component} from 'react'
 
 class Toggle extends Component {
 
-  constructor(props) {
-    super(props)
-    this.state = {
-      isOpen: false,
-    }
-    this.handleToggleClick = this.handleToggleClick.bind(this)
+  state = {
+    isOpen: false,
   }
 
-  handleToggleClick() {
+  handleToggleClick = () => {
     this.setState({
       isOpen: !this.state.isOpen,
     })

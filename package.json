@@ -15,6 +15,7 @@
     "testEnvironment": "node"
   },
   "eslintConfig": {
+    "parser": "babel-eslint",
     "extends": [
       "eslint:recommended",
       "plugin:react/recommended"
@@ -44,12 +45,17 @@
     "presets": [
       "env",
       "react"
+    ],
+    "plugins": [
+      "transform-class-properties"
     ]
   },
   "now": {
     "alias": "example-render-callback"
   },
   "devDependencies": {
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-preset-env": "^1.5.1",
     "babel-preset-react": "^6.24.1",
     "eslint": "^3.19.0",
