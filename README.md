@@ -19,11 +19,8 @@ import {Component} from 'react'
 
 class SomeComponent extends Component {
 
-  constructor(props) {
-    super(props)
-    this.state = {
-      someState: someValue,
-    }
+  this.state = {
+    someState: someValue,
   }
 
   render() {
